@@ -3,89 +3,72 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <limits.h>
-#include <stdint.h>
-#include <inttypes.h>
+#include <errno.h>
 
-struct Node
+enum
 {
-    int32_t key;
-    int32_t left_idx;
-    int32_t right_idx;
+    INPUT_FILE_ARG_POS = 1,
+    OUTPUT_FILE_ARG_POS = 2,
+    MOD_ARG_POS = 3,
+    ARG_NUM = 4,
 };
 
-int
-read_by_byte(int fd)
-{
-    int i;
-    uint32_t buf, num = 0;
-    for (i = 0; i < sizeof(buf); ++i) {
-        buf = 0;
-        if (read(fd, &buf, sizeof(char)) == -1) {
-            fprintf(stderr, "file reading error\n");
-            exit(1);
-        }
-        num <<= CHAR_BIT;
-        num |= buf;
-    }
-    return (int32_t) num;
-}
-
 void
-print_tree(int fd)
+write_int(int fd, int n)
 {
-    int32_t key, left_idx, right_idx;
-    key = read_by_byte(fd);
-    left_idx = read_by_byte(fd);
-    right_idx = read_by_byte(fd);
-    if (right_idx) {
-        __off_t n_rw = lseek(fd, (__off_t) (right_idx * sizeof(struct Node)), SEEK_SET);
-        if (n_rw == -1) {
-            fprintf(stderr, "lseek error\n");
-            exit(1);
-        }
-        print_tree(fd);
-    }
-    printf("%" PRId32 "\n", key);
-    if (left_idx) {
-        __off_t n_rw = lseek(fd, (__off_t) (left_idx * sizeof(struct Node)), SEEK_SET);
-        if (n_rw == -1) {
-            fprintf(stderr, "lseek error\n");
-            exit(1);
-        }
-        print_tree(fd);
+    if (write(fd, &n, sizeof(n)) == -1) {
+        fprintf(stderr, "file writing error\n");
+        exit(1);
     }
 }
 
 int
 main(int argc, char **argv)
 {
-    if (argc < 4) {
+    if (argc < ARG_NUM) {
         fprintf(stderr, "not enough command line arguments\n");
-        exit(1);
-    }
-    int in = open(argv[1], O_RDONLY);
-    if (in == -1) {
-        fprintf(stderr, "unable to open input file: %s\n", argv[1]);
-        exit(1);
-    }
-    int out = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC);
-    if (out == -1) {
-        fprintf(stderr, "unable to open output file: %s\n", argv[2]);
-        exit(1);
-    }
-    int mod;
-    if (sscanf(argv[3], "%d", &mod) == 0) {
-        fprintf(stderr, "unable to convert to int: %s\n", argv[3]);
         exit(0);
     }
-
+    int in = open(argv[INPUT_FILE_ARG_POS], O_RDONLY);
+    if (in == -1) {
+        fprintf(stderr, "unable to open input file: %s\n", argv[INPUT_FILE_ARG_POS]);
+        exit(0);
+    }
+    int out = open(argv[OUTPUT_FILE_ARG_POS], O_WRONLY | O_CREAT | O_TRUNC, 0700);
+    if (out == -1) {
+        fprintf(stderr, "unable to open output file: %s\n", argv[OUTPUT_FILE_ARG_POS]);
+        exit(0);
+    }
+    int mod;
+    if (sscanf(argv[MOD_ARG_POS], "%d", &mod) == 0) {
+        fprintf(stderr, "unable to convert to int: %s\n", argv[MOD_ARG_POS]);
+        exit(0);
+    }
+    ssize_t n_rw;
+    unsigned char buf;
+    long long square_sum = 0, n = 1, i;
+    while ((n_rw = read(in, &buf, sizeof(buf)))) {
+        if (n_rw == -1) {
+            fprintf(stderr, "file reading error\n");
+            exit(errno);
+        }
+        for (i = 0; i < CHAR_BIT; ++i) {
+            square_sum += n * n;
+            square_sum %= mod;
+            if (buf & 1) {
+                write_int(out, (int) square_sum);
+            }
+            buf >>= 1;
+            n++;
+        }
+    }
     if (close(in) == -1) {
         fprintf(stderr, "file closing error\n");
-        exit(1);
+        exit(errno);
     }
     if (close(out) == -1) {
         fprintf(stderr, "file closing error\n");
-        exit(1);
+        exit(errno);
     }
     return 0;
 }
