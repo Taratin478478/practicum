@@ -1,18 +1,25 @@
 #include <stdio.h>
 #include <string.h>
 #include <sys/stat.h>
+#include <stdlib.h>
 
-struct FILE_AND_NAME
+struct FILE
 {
     __ino_t inode;
     char *fn;
 };
 
 int
+cmp_files(const void *f1, const void *f2)
+{
+    return strcmp(((struct FILE *) f1)->fn, ((struct FILE *) f2)->fn);
+}
+
+int
 main(int argc, char **argv)
 {
     unsigned int i, j, len = 0, is_new_file;
-    struct FILE_AND_NAME files[argc];
+    struct FILE files[argc];
     struct stat buf;
     for (i = 1; i < argc; i++) {
         if (stat(argv[i], &buf) == -1) {
@@ -35,6 +42,7 @@ main(int argc, char **argv)
             len++;
         }
     }
+    qsort(files, len, sizeof(struct FILE), cmp_files);
     for (i = 0; i < len; ++i) {
         printf("%s\n", files[i].fn);
     }

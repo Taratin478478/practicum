@@ -34,7 +34,7 @@ main(int argc, char **argv)
         fprintf(stderr, "unable to open input file: %s\n", argv[INPUT_FILE_ARG_POS]);
         exit(0);
     }
-    int out = open(argv[OUTPUT_FILE_ARG_POS], O_WRONLY | O_CREAT | O_TRUNC, 0700);
+    int out = open(argv[OUTPUT_FILE_ARG_POS], O_WRONLY | O_CREAT | O_TRUNC, 0600);
     if (out == -1) {
         fprintf(stderr, "unable to open output file: %s\n", argv[OUTPUT_FILE_ARG_POS]);
         exit(0);
