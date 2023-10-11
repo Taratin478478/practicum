@@ -4,15 +4,13 @@
 
 const char BACK_PATH[] = "/..", BASE_PATH[] = ".", ZERO_PATH[] = "/.";
 
-enum
-{
+enum {
     BACK_PATH_LEN = sizeof(BACK_PATH) - 1,
     ZERO_PATH_LEN = sizeof(ZERO_PATH) - 1,
 };
 
 char *
-simplify_path(const char *path)
-{
+simplify_path(const char *path) {
     char *res;
     if ((res = calloc(strlen(path) + 1, sizeof(char))) == 0) {
         fprintf(stderr, "calloc error\n");
@@ -123,4 +121,30 @@ relativize_path(const char *path1, const char *path2)
     free(temp1);
     free(temp2);
     return res;
+}
+
+
+int
+main(int argc, char **argv)
+{
+    char test1[][1000] = {"/a/b/c/d", "/a/b", "/a", "/a/b/c/d", "/a/b/c/d", "/a/b", "/a", "/../a", "/../a", "/./a",
+                         "/a/../a/../a", "/a/../a/../../.././a/./.././../a/b/./c/d/../././././.", "/", "/", "/..a",
+                         "/a/b/c/d", "/a/b/c/d/../../.", "/../../../././a/b/c/d"};
+    char test2[][1000] = {"/a/e/f", "/a/e/f", "/a/e/f", "/a", "/", "/a", "/a", "/a", "/../a", "/../a", "/a",
+                         "/../a/b/c/d/e/..", "/a", "/", "/..a/.b/..c/...d", "/a/e./f../.../...", "/a/e.../f", "/a/e/f"};
+    char ans[][1000] = {"../../e/f", "e/f", "a/e/f", "../..", "../../..", ".", "a", "a", "a", "a", "a", "c/d", "a", ".",
+                       "..a/.b/..c/...d", "../../e./f../.../...", "e.../f", "../../e/f"};
+    int ok = 1;
+    char res[1000];
+    for (int i = 0; i < 18; ++i) {
+        strcpy(res, relativize_path(test1[i], test2[i]));
+        if (strcmp(res, ans[i])) {
+            printf("WA on test %d:\npath1:     %s\npath2:     %s\nans:       %s\nright ans: %s\n", i, test1[i], test2[i], res, ans[i]);
+            ok = 0;
+        }
+    }
+    if (ok) {
+        printf("OK\n");
+    }
+    return 0;
 }
