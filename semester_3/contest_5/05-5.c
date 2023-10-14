@@ -123,7 +123,6 @@ relativize_path(const char *path1, const char *path2)
     return res;
 }
 
-
 int
 main(int argc, char **argv)
 {

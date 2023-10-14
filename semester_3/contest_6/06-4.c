@@ -13,6 +13,7 @@ enum
     ARG_N = 3,
     D_ARG = 1,
     Z_ARG = 2,
+    PATH_BUF_SIZE = PATH_MAX + 1,
 };
 
 void
@@ -50,7 +51,11 @@ rec_print_dir(char *dir_name, char *rel_path, size_t rel_path_len, size_t max_si
                         rel_path[rel_path_len] = '/';
                     }
                     new_dir_name_len = strlen(de->d_name);
-                    strcpy(rel_path + (rel_path_len + !first), de->d_name);
+                    if (rel_path_len + !first + new_dir_name_len + 1 > PATH_BUF_SIZE) {
+                        fprintf(stderr, "path buffer overflow\n");
+                        exit(1);
+                    }
+                    memmove(rel_path + (rel_path_len + !first), de->d_name, new_dir_name_len + 1);
                     rec_print_dir(path, rel_path, rel_path_len + new_dir_name_len + !first, max_size, depth + 1);
                     rel_path[rel_path_len] = 0;
                 }
@@ -75,7 +80,7 @@ main(int argc, char **argv)
         fprintf(stderr, "invalid max len number z: %s\n", argv[Z_ARG]);
         exit(0);
     }
-    char rel_path[PATH_MAX + 1] = "";
+    char rel_path[PATH_BUF_SIZE] = "";
     rec_print_dir(argv[D_ARG], rel_path, 0, z, 1);
     return 0;
 }
