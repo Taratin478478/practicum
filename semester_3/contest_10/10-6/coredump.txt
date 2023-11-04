@@ -1,0 +1,867 @@
+CORE
+CORE
+with_core
+./with_core 
+IGISCORE
+CORE
+ELIFCORE
+/home/levysotsky/Studies/Shad/Cpp/shad-cpp/private/gdb/with_core
+/home/levysotsky/Studies/Shad/Cpp/shad-cpp/private/gdb/with_core
+/home/levysotsky/Studies/Shad/Cpp/shad-cpp/private/gdb/with_core
+/lib/x86_64-linux-gnu/libm-2.27.so
+/lib/x86_64-linux-gnu/libm-2.27.so
+/lib/x86_64-linux-gnu/libm-2.27.so
+/lib/x86_64-linux-gnu/libm-2.27.so
+/lib/x86_64-linux-gnu/libc-2.27.so
+/lib/x86_64-linux-gnu/libc-2.27.so
+/lib/x86_64-linux-gnu/libc-2.27.so
+/lib/x86_64-linux-gnu/libc-2.27.so
+/lib/x86_64-linux-gnu/libgcc_s.so.1
+/lib/x86_64-linux-gnu/libgcc_s.so.1
+/lib/x86_64-linux-gnu/libgcc_s.so.1
+/lib/x86_64-linux-gnu/libgcc_s.so.1
+/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+/lib/x86_64-linux-gnu/ld-2.27.so
+/lib/x86_64-linux-gnu/ld-2.27.so
+/lib/x86_64-linux-gnu/ld-2.27.so
+CORE
+LINUX
+/lib64/ld-linux-x86-64.so.2
+{,=wS
+libstdc++.so.6
+__gmon_start__
+_ITM_deregisterTMCloneTable
+_ITM_registerTMCloneTable
+_ZNSaIcED1Ev
+__gxx_personality_v0
+_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EPKcRKS3_
+_ZdlPv
+__cxa_begin_catch
+_ZNSt13random_device9_M_getvalEv
+__cxa_end_catch
+_ZNSaIcEC1Ev
+_ZSt17__throw_bad_allocv
+_ZNKSt8__detail20_Prime_rehash_policy14_M_need_rehashEmmm
+_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev
+_Znwm
+__cxa_rethrow
+_ZNSt13random_device7_M_initERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+_ZNSt13random_device7_M_finiEv
+libgcc_s.so.1
+_Unwind_Resume
+libc.so.6
+__stack_chk_fail
+memset
+__cxa_finalize
+memmove
+__libc_start_main
+GCC_3.0
+GLIBC_2.4
+GLIBC_2.2.5
+GLIBCXX_3.4.18
+GLIBCXX_3.4.21
+CXXABI_1.3
+GLIBCXX_3.4
+%zc 
+%rc 
+%jc 
+%bc 
+%Zc 
+%Rc 
+%Jc 
+%Bc 
+=Ac 
+=gb 
+AUATSH
+0_#o
+`/&o
+p~{o
+p~{o
+ 0TJ
+ "M	
+&,f%
+H^M 
+A( @
+@C& 
+x$zn
+@#zn
+6(zn
+F(zn
+v(zn
+6*zn
+stapsdt
+libm
+slowatan2
+8@%rax 8@%rdx 8@%rcx 8@%rbp
+stapsdt
+libm
+slowatan2_inexact
+8@%rax 8@%rdx 8@%rcx 8@%rbp
+stapsdt
+libm
+slowlog_inexact
+8@%rax 8@%rdx 8@24(%rsp)
+stapsdt
+libm
+slowlog
+8@%rax 8@%rdx 8@24(%rsp)
+stapsdt
+libm
+slowatan_inexact
+8@%rax 8@%rdx 8@24(%rsp)
+stapsdt
+libm
+slowatan
+8@%rax 8@%rdx 8@24(%rsp)
+stapsdt
+libm
+slowtan
+8@%rax 8@%rbx
+stapsdt
+libm
+slowtan
+8@%rax 8@%r12
+stapsdt
+libm
+slowtan
+8@%rax 8@%r12
+stapsdt
+libm
+slowtan
+8@%rax 8@%r12
+stapsdt
+libm
+slowtan
+8@%rax 8@%r12
+stapsdt
+libm
+slowtan
+8@%rax 8@%r12
+stapsdt
+libm
+slowtan
+8@%rax 8@%r12
+stapsdt
+libm
+slowtan
+8@%rax 8@%r12
+stapsdt
+libm
+slowasin
+8@%rax 8@%rdx
+stapsdt
+libm
+slowacos
+8@%rax 8@%rdx
+stapsdt
+libm
+slowsin
+8@%rax 8@%rdx 8@%rbx
+stapsdt
+libm
+slowcos
+8@%rax 8@%rdx 8@%rbp
+stapsdt
+libm
+slowexp_p6
+8@%rax 8@%rbp
+stapsdt
+libm
+slowexp_p32
+8@%rax 8@%rbp
+stapsdt
+libm
+slowpow_p10
+8@%rax 8@%rdx 8@%rcx 8@%r15
+stapsdt
+libm
+slowpow_p32
+8@%rax 8@%rdx 8@%rcx 8@%r15
+stapsdt
+libm
+slowlog_inexact
+8@%rax 8@%rdx 8@24(%rsp)
+stapsdt
+libm
+slowlog
+8@%rax 8@%rdx 8@24(%rsp)
+stapsdt
+libm
+slowatan_inexact
+8@%rax 8@%rdx 8@24(%rsp)
+stapsdt
+libm
+slowatan
+8@%rax 8@%rdx 8@24(%rsp)
+stapsdt
+libm
+slowatan2
+8@%rax 8@%rdx 8@%rcx 8@%rbp
+stapsdt
+libm
+slowatan2_inexact
+8@%rax 8@%rdx 8@%rcx 8@%rbp
+stapsdt
+libm
+slowtan
+8@%rax 8@%rbx
+stapsdt
+libm
+slowtan
+8@%rax 8@%r12
+stapsdt
+libm
+slowtan
+8@%rax 8@%r12
+stapsdt
+libm
+slowtan
+8@%rax 8@%r12
+stapsdt
+libm
+slowtan
+8@%rax 8@%r12
+stapsdt
+libm
+slowtan
+8@%rax 8@%r12
+stapsdt
+libm
+slowtan
+8@%rax 8@%r12
+stapsdt
+libm
+slowtan
+8@%rax 8@%r12
+stapsdt
+libm
+slowexp_p6
+8@%rax 8@%rbp
+stapsdt
+libm
+slowexp_p32
+8@%rax 8@%rbp
+stapsdt
+libm
+slowpow_p10
+8@%rax 8@%rdx 8@%rcx 8@%r15
+stapsdt
+libm
+slowpow_p32
+8@%rax 8@%rdx 8@%rcx 8@%r15
+stapsdt
+libm
+slowasin
+8@%rax 8@%rdx
+stapsdt
+libm
+slowacos
+8@%rax 8@%rdx
+stapsdt
+libm
+slowsin
+8@%rax 8@%rdx 8@%rbx
+stapsdt
+libm
+slowcos
+8@%rax 8@%rdx 8@%rbp
+stapsdt
+libm
+slowlog_inexact
+8@%rax 8@%rdx 8@24(%rsp)
+stapsdt
+libm
+slowlog
+8@%rax 8@%rdx 8@24(%rsp)
+stapsdt
+libm
+slowatan_inexact
+8@%rax 8@%rdx 8@24
+T<- 
+  ($
+*0" 
+b B$
+h	P4@
+@T@B
+@"$@
+ %	@
+@o@ A
+@@ B
+gT D@
+J5A	
+PE)f
+0T;8B
+.$@@H
+0*F 
+!@ d
+aliases
+ethers
+group
+gshadow
+hosts
+initgroups
+netgroup
+networks
+passwd
+protocols
+publickey
+services
+shadow
+CAk[S
+P+Lo
+h+Lo
+`+Lo
+2(j<|
+2"j<|
+OpPI
+B!6zB!6z
+		$=G
+$UY# 
+Hwn8
+`P!C
+^@	6
+r2@	5
+Y@@@
+c hP
+Em(D
+I*A@@
+DK8b
+ !%0P
+d 	Q
+@"la
+.CZC
+BQ]Hbl
+*S3P
+b##a
+T$ H
+@@N 
+&chD
+P !P
+T1DO@
+!6#"
+@hFQ
+-@t 
+P@#Da
+" @L@@ 
+! 1#
+!i !
+`3`H
+  @M
+hL	t
+'T(e
+118P5
+p&@f
+&dQp
+8SF\
+!D@`@
+!%"	
+ 	A!@
+0YNH
+p  o
+P* o
+@2 o
+ " o
+@' o
+P0 o
+`" o
+P" o
+ , o
+@# o
+p) o
+p+ o
+8_Lo
+H_Lo
+@_Lo
+X_Lo
+P_Lo
+x^Lo
+`^Lo
+p^Lo
+h^Lo
+h^Lo
+ _Lo
+p^Lo
+`^Lo
+0_Lo
+(_Lo
+x^Lo
+(/Lo
+ /Lo
+@^ o
+P^ o
+@b o
+0c o
+0a o
+@a o
+0d o
+@b o
+0c o
+0a o
+@a o
+0d o
+ X&o
+P^&o
+`X&o
+ W&o
+0W&o
+`]&o
+@W&o
+PW&o
+pV&o
+0[&o
+ \&o
+p\&o
+@p!o
+Pp!o
+@u!o
+`3 o
+p/ o
+Po!o
+`o!o
+ w!o
+0v!o
+po!o
+pw!o
+`x!o
+0- o
+04 o
+@7 o
+ ( o
+ 5 o
+` "o
+p. o
+@6 o
+ 1 o
+0# o
+@^ o
+P^ o
+`| o
+p{ o
+0z o
+`y o
+@~ o
+P} o
+ r!o
+Pr!o
+@p!o
+Pp!o
+@u!o
+`p!o
+@p!o
+Pp!o
+@u!o
+Po!o
+`o!o
+ w!o
+0v!o
+po!o
+pw!o
+`x!o
+0s!o
+@q!o
+pw!o
+`x!o
+ p!o
+`q!o
+Po!o
+`o!o
+ w!o
+0v!o
+po!o
+ q!o
+Ps!o
+ps!o
+ 	(o
+@	(o
+P!"o
+P!"o
+` "o
+` "o
+p8#o
+0=#o
+p5#o
+`>#o
+@;#o
+ 7#o
+0d#o
+ `#o
+pg#o
+Pa#o
+0f#o
+@h#o
+ h#o
+`h#o
+p|#o
+0|#o
+`}#o
+ ~#o
+p~#o
+`b$o
+@g$o
+pj$o
+pv$o
+Pg$o
+@U$o
+0m%o
+PV%o
+Pn%o
+pX%o
+ c%o
+pW%o
+p_%o
+ ^%o
+ `%o
+0W%o
+Pf%o
+`g%o
+0\%o
+`d%o
+`X&o
+0_&o
+`X&o
+ X&o
+P^&o
+0X&o
+0Z&o
+ X&o
+P^&o
+PZ&o
+` 'o
+ G'o
+pZ&o
+`_&o
+ W&o
+0W&o
+`]&o
+@W&o
+PW&o
+pV&o
+0[&o
+ \&o
+p\&o
+0`&o
+pV&o
+0[&o
+ \&o
+p\&o
+ W&o
+0W&o
+`]&o
+@W&o
+PW&o
+0Y&o
+PY&o
+pY&o
+PX&o
+PX&o
+P`&o
+p`&o
+`_Lo
+`o!o
+@*Lo
+@W&o
+8*Lo
+h_Lo
+X_Lo
+`x!o
+8^Lo
+pV&o
+ /Lo
+po!o
+P^&o
+(^Lo
+ =Lo
+` "o
+0_Lo
+@g$o
+`]Lo
+@_Lo
+p^Lo
+(_Lo
+H^Lo
+0W&o
+PW&o
+@^Lo
+@p!o
+`?Lo
+ \&o
+`^Lo
+pj$o
+p\&o
+`b$o
+(/Lo
+8_Lo
+` 'o
+X^Lo
+x^Lo
+ X&o
+p_Lo
+pw!o
+P^Lo
+@>Lo
+0[&o
+P_Lo
+H*Lo
+x_Lo
+Po!o
+ ^Lo
+0v!o
+ _Lo
+0^Lo
+@u!o
+ w!o
+h^Lo
+ W&o
+ G'o
+Pp!o
+H_Lo
+`]&o
+`*Lo
+`M&o
+@S&o
+P+Lo
+`bzo
+`bzo
+`-Lo
+uTi7J
+|F:m
+_rtld_global
+__get_cpu_features
+_dl_find_dso_for_object
+_dl_make_stack_executable
+_dl_exception_create
+__libc_stack_end
+_dl_catch_exception
+malloc
+_dl_deallocate_tls
+_dl_signal_exception
+__tunable_get_val
+__libc_enable_secure
+__tls_get_addr
+_dl_get_tls_static_info
+calloc
+_dl_exception_free
+_dl_debug_state
+_dl_argv
+_dl_allocate_tls_init
+_rtld_global_ro
+realloc
+_dl_rtld_di_serinfo
+_dl_mcount
+_dl_allocate_tls
+_dl_signal_error
+_dl_exception_create_format
+_r_debug
+_dl_catch_error
+ld-linux-x86-64.so.2
+GLIBC_2.2.5
+GLIBC_2.3
+GLIBC_2.4
+GLIBC_PRIVATE
+%zq"
+%rq"
+%jq"
+%bq"
+%Zq"
+%Rq"
+2F?^
+2F?^
+x$mo
+p$mo
+06mo
+ `Lo
+X#mo
+`rKo
+libstdc++.so.6
+/usr/lib/x86_64-linux-gnu
+libstdc++.so.6
+/lib/x86_64-linux-gnu/libgcc_s.so.1
+x)mo
+p)mo
+p;mo
+X(mo
+libgcc_s.so.1
+/lib/x86_64-linux-gnu
+libgcc_s.so.1
+/lib/x86_64-linux-gnu/libc.so.6
+h.mo
+`.mo
+H-mo
+ 4mo
+libc.so.6
+/lib/x86_64-linux-gnu
+libc.so.6
+/lib/x86_64-linux-gnu/libm.so.6
+H3mo
+@pyn
+@3mo
+ ryn
+ vyn
+p3mo
+(2mo
+P4mo
+`3mo
+libm.so.6
+/lib/x86_64-linux-gnu
+libm.so.6
+``'	
+a_&	
+b^&	
+d^&	
+`Z'	
+``'	
+`_'	
+`S'	
+`R'	
+`Z*	
+sse2
+x86_64
+avx512_1
+i586
+i686
+haswell
+xeon_phi
+ &No
+@pLo
+8sLo
+ kNo
+ ]#o
+@]#o
+ ^#o
+P^#o
+`^#o
+p^#o
+P]#o
+`]#o
+0^#o
+@^#o
+p]#o
+ `#o
+linux-vdso.so.1
+tls/haswell/x86_64/tls/x86_64/
+`pNo
+wpNo
+/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+X#mo
+ :mo
+ :mo
+X#mo
+X#mo
+boMo
+ `zo
+{tUI
+DDpc
+)rl"
+]u9j
+`trk
+aA|W
+@KS`
+n0r@
+3wMo
+kx86_64
+./with_core
+CLUTTER_IM_MODULE=xim
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LC_MEASUREMENT=ru_RU.UTF-8
+VIRTUALENVWRAPPER_WORKON_CD=1
+LESSCLOSE=/usr/bin/lesspipe %s %s
+LC_PAPER=ru_RU.UTF-8
+LC_MONETARY=ru_RU.UTF-8
+XDG_MENU_PREFIX=gnome-
+VIRTUALENVWRAPPER_HOOK_DIR=/home/levysotsky/virtenvs
+LANG=en_US.UTF-8
+DISPLAY=:0
+WORKON_HOME=/home/levysotsky/virtenvs
+GNOME_SHELL_SESSION_MODE=ubuntu
+COLORTERM=truecolor
+DESKTOP_AUTOSTART_ID=10b3e44b4cf5ceeb87155086014958966900000011900007
+USERNAME=levysotsky
+XDG_VTNR=2
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path
+LC_NAME=ru_RU.UTF-8
+XDG_SESSION_ID=2
+USER=levysotsky
+DESKTOP_SESSION=ubuntu
+QT4_IM_MODULE=xim
+TEXTDOMAINDIR=/usr/share/locale/
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/1a095e64_f26d_4822_b098_7c8d5f9f93a2
+DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path
+PWD=/home/levysotsky/Studies/Shad/Cpp/shad-cpp/private/gdb
+HOME=/home/levysotsky
+TEXTDOMAIN=im-config
+SSH_AGENT_PID=1268
+QT_ACCESSIBILITY=1
+XDG_SESSION_TYPE=x11
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+XDG_SESSION_DESKTOP=ubuntu
+LC_ADDRESS=ru_RU.UTF-8
+LC_NUMERIC=ru_RU.UTF-8
+GTK_MODULES=gail:atk-bridge
+VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+WINDOWPATH=2
+VIRTUALENVWRAPPER_SCRIPT=/home/levysotsky/.local/bin/virtualenvwrapper.sh
+VTE_VERSION=5202
+TERM=xterm-256color
+SHELL=/bin/bash
+QT_IM_MODULE=ibus
+XMODIFIERS=@im=ibus
+IM_CONFIG_PHASE=2
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+GNOME_TERMINAL_SERVICE=:1.129
+XDG_SEAT=seat0
+SHLVL=1
+LC_TELEPHONE=ru_RU.UTF-8
+GDMSESSION=ubuntu
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+LOGNAME=levysotsky
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+XDG_RUNTIME_DIR=/run/user/1000
+XAUTHORITY=/run/user/1000/gdm/Xauthority
+VIRTUALENVWRAPPER_PROJECT_FILENAME=.project
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+PATH=/home/levysotsky/.local/bin:/home/levysotsky/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/levysotsky/.local/bin
+LC_IDENTIFICATION=ru_RU.UTF-8
+SESSION_MANAGER=local/levysotsky-Latitude-E7470:@/tmp/.ICE-unix/1190,unix/levysotsky-Latitude-E7470:/tmp/.ICE-unix/1190
+LESSOPEN=| /usr/bin/lesspipe %s
+GTK_IM_MODULE=ibus
+LC_TIME=ru_RU.UTF-8
+_=./with_core
+OLDPWD=/home/levysotsky/Studies/Shad/Cpp/shad-cpp/private
+./with_core
+bemX
+__vdso_clock_gettime
+__vdso_gettimeofday
+__vdso_time
+__vdso_getcpu
+linux-vdso.so.1
+LINUX_2.6
+Linux
+"FS|E
+AVAUATARL
+[AZA\A]A^]I
+D9#u
+D9#u
+;v*1
+AVAUATARSH
+[AZA\A]A^]I
+GCC: (Ubuntu 7.3.0-16ubuntu3) 7.3.0
+.shstrtab
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_d
+.dynamic
+.rodata
+.note
+.eh_frame_hdr
+.eh_frame
+.text
+.altinstructions
+.altinstr_replacement
+.comment
