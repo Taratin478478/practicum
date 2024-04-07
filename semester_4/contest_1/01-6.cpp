@@ -1,8 +1,21 @@
 #include <iostream>
 #include <iomanip>
 #include <utility>
+#include <limits>
 
-using std::cin, std::cout, std::endl, std::pair;
+using std::cin, std::cout, std::endl, std::pair, std::abs;
+
+bool eps_equal(long double a, long double b) // almost equal relative
+{
+    long double diff = abs(a - b);
+    a = abs(a);
+    b = abs(b);
+    long double largest = b > a ? b : a;
+    if (diff <= largest * std::numeric_limits<long double>::epsilon()) {
+        return true;
+    }
+    return false;
+}
 
 class Point {
     long double x, y;
@@ -45,9 +58,9 @@ pair<int, Point> line_intersection(Line &l1, Line &l2) {
     pair<int, Point> p;
     long double dif1x = l1.get_x_diff(), dif1y = l1.get_y_diff(), dif2x = l2.get_x_diff(), dif2y = l2.get_y_diff(),
             denominator = dif1x * dif2y - dif2x * dif1y, det1 = l1.get_det(), det2 = l2.get_det();
-    if (denominator == 0) {
-        if (dif1y * (l2.p1.get_x() - l1.p1.get_x()) == dif1x * (l2.p1.get_y() - l1.p1.get_y())
-            && dif1y * (l2.p2.get_x() - l1.p1.get_x()) == dif1x * (l2.p2.get_y() - l1.p1.get_y())) {
+    if (eps_equal(denominator, 0)) {
+        if (eps_equal(dif1y * (l2.p1.get_x() - l1.p1.get_x()), dif1x * (l2.p1.get_y() - l1.p1.get_y()))
+            && eps_equal(dif1y * (l2.p2.get_x() - l1.p1.get_x()), dif1x * (l2.p2.get_y() - l1.p1.get_y()))) {
             p.first = 2;
         } else {
             p.first = 0;

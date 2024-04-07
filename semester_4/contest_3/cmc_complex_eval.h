@@ -12,7 +12,7 @@ complex
 eval(const std::vector<std::string> &args, const complex &z)
 {
     complex_stack st{};
-    static const std::map<std::string, std::function<void()>> opmap{
+    const std::map<std::string, std::function<void()>> opmap{
             {"z", [&st, &z] { st = st << z; }},
             {"+", [&st] {
                 const complex a{+st}, b{+(st = ~st)};
