@@ -86,8 +86,10 @@ add_executable(04-07-2_modern semester_4/contest_7/07-2_modern.cpp)
 add_executable(04-07-3 semester_4/contest_7/07-3.cpp)
 add_executable(04-07-4 semester_4/contest_7/07-4.cpp)
 add_executable(04-07-5 semester_4/contest_7/07-5.cpp)
-#[[
 add_executable(04-08-1 semester_4/contest_8/08-1.cpp)
 add_executable(04-08-2 semester_4/contest_8/08-2.cpp)
 add_executable(04-08-3 semester_4/contest_8/08-3.cpp)
+add_executable(04-08-4 semester_4/contest_8/08-4.cpp)
+add_executable(04-08-5 semester_4/contest_8/08-5.cpp)
+#[[
 ]]
