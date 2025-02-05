@@ -1,0 +1,152 @@
+\documentclass[11pt]{article}
+
+\usepackage{a4wide}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+\ \vspace{-3cm}
+
+\includegraphics[width=0.5\textwidth]{msu.eps}\\
+{\scshape Московский государственный университет имени М.~В.~Ломоносова}\\
+Факультет вычислительной математики и кибернетики\\
+Кафедра системного анализа
+
+\vfill
+
+{\LARGE Отчет по практикуму}
+
+\vspace{1cm}
+
+{\Huge\bfseries <<Вычисление опорных функций некоторых множеств>>}
+\end{center}
+
+\vspace{1cm}
+
+\begin{flushright}
+  \large
+  \textit{Студент 315 группы}\\
+  М.\,В.~Миловидов
+
+  \vspace{5mm}
+
+  \textit{Руководитель практикума}\\
+  к.ф.-м.н., доцент П.\,А.~Точилин
+\end{flushright}
+
+\vfill
+
+\begin{center}
+Москва, 2024
+\end{center}
+
+\newpage
+\section{Постановка задачи}
+
+Даны 3 множества:
+\begin{enumerate}
+\item Эллипс с полуосями a, b и центром в точке $z_0 = (x_0, y_0)$, заданный уравнением
+\[
+\frac{(x - x_0)^2}{a^2} + \frac{(y - y_0)^2}{b^2} = 1
+\]
+\item Прямоугольник со сторонами 2a, 2b, параллельными осям координат, и центром в точке $z_0$
+\item Ромб с диагоналями 2a, 2b, параллельными осям координат, и центром в точке $z_0$
+\end{enumerate}
+Требуется аналитически вывести опорную функцию для каждого из этих множеств.
+
+\section{Вывод опорных функций}
+\[z = (x, y)~~~~ l = (l_1, l_2)\]
+Определение опорной функции:
+\[\rho(l|Z)~=~\sup_{z\in Z} \langle l, z \rangle = \sup_{(x, y)\in Z} (l_1 x + l_2 y)\]
+\newline
+Нам понадобится следующее свойство опорной функции:
+\begin{equation} \label{eq1}
+\rho(l|\{z_0\} + Z)~=~\langle l, z_0 \rangle + \rho(l | Z)
+\end{equation}
+
+\subsection{Эллипс}
+
+Сведем к эллипсу с центром в точке 0 по свойству (1):
+\[
+\rho(l|\Z)~=~\langle l, z_0 \rangle + \rho(l | Z - \{z_0\})
+\]
+Для нахождения супремума воспользуемся методом множителей Лагранжа:
+\[L = l_1 x + l_2 y + \lambda (\frac{x^2}{a^2} + \frac{y^2}{b^2}- 1)\]
+\[L_x = l_1 + \frac{2 \lambda x}{a^2} = 0~~~~
+L_y = l_2 + \frac{2 \lambda y}{b^2} = 0~~~~
+L_\lambda = \frac{x^2}{a^2} + \frac{y^2}{b^2}- 1 = 0\]
+\[x = \frac{-l_1 a^2}{2 \lambda}~~~~
+y = \frac{-l_2 b^2}{2 \lambda}~~~~\]
+\[\frac{l_1^2 a^2}{4 \lambda^2} + \frac{l_2^2 b^2}{4 \lambda^2} = 1~~~~
+\lambda = -\frac{1}{2}\sqrt{l_1^2 a^2 + l_2^2 b^2}\]
+\[\rho(l | Z - \{z_0\}) = \frac{l_1^2 a^2}{\sqrt{l_1^2 a^2 + l_2^2 b^2}} + \frac{l_2^2 b^2}{\sqrt{l_1^2 a^2 + l_2^2 b^2}} = \sqrt{l_1^2 a^2 + l_2^2 b^2}\]
+\[\rho(l|Z)~=~\langle l, z_0 \rangle + \sqrt{l_1^2 a^2 + l_2^2 b^2}\]
+
+\subsection{Квадрат}
+
+Сведем к квадрату с центром в точке 0 и гранью 2 по свойству (1):
+\[\rho(l|Z)~=~ \langle l, z_0 \rangle + \rho(l | Z - \{z_0\})\]
+Геометрически при $\Vert l \Vert = 1$ опорная функция является расстоянием до опорной гиперплоскости, то есть до самой дальней плоскости с нормалью l, касающейся исходного множества. В плоском случае это прямая. Из этого для квадрата и ромба получаем, что опорный вектор (на котором достигается супремум) является одной из вершин квадрата. Таким образом,
+\[
+\rho(l | Z - \{z_0\}) = \max\{ \langle l, \begin{bmatrix}
+           a \\
+           b
+         \end{bmatrix} \rangle,
+         \langle l, \begin{bmatrix}
+           a \\
+           -b
+         \end{bmatrix} \rangle,
+         \langle l, \begin{bmatrix}
+           -a \\
+           b
+         \end{bmatrix} \rangle,
+         \langle l, \begin{bmatrix}
+           -a \\
+           -b
+         \end{bmatrix} \rangle \} =\]
+\[= \max\{a l_1 + b l_2, a l_1 - b l_2, -a l_1 + b l_2, -a l_1 - b l_2\} = a |l_1| + b |l_2|\]
+\[\rho(l|Z) = \langle l, z_0 \rangle + a |l_1| + b |l_2|\]
+
+\subsection{Ромб}
+
+Рассуждаем аналогично предыдущему случаю:
+
+\[\rho(l|Z)~=~ \langle l, z_0 \rangle + \rho(l | Z - \{z_0\})\]
+
+\[
+\rho(l | Z - \{z_0\}) = \max\{ \langle l, \begin{bmatrix}
+           a \\
+           0
+         \end{bmatrix} \rangle,
+         \langle l, \begin{bmatrix}
+           0 \\
+           b
+         \end{bmatrix} \rangle,
+         \langle l, \begin{bmatrix}
+           -a \\
+           0
+         \end{bmatrix} \rangle,
+         \langle l, \begin{bmatrix}
+           0 \\
+           -b
+         \end{bmatrix} \rangle \} =\]
+\[= \max\{a l_1, b l_2, -a l_1, -b l_2\} = \max\{a |l_1|, b |l_2|\}\]
+\[\rho(l|Z) = \langle l, z_0 \rangle + \max\{a |l_1|, b |l_2|\}\]
+
+\section{Вывод}
+
+Для рассмотреных множеств были получены простые представления опорной функции, которые можно использовать, например, для кусочно-линейной аппроксимации границы множества.
+
+\begin{thebibliography}{99}
+\bibitem{1} Чистяков И.В., Паршиков М.В. Лекции по Оптимальному Управлению
+\end{thebibliography}
+
+\end{document}
+
+

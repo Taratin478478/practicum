@@ -1,0 +1,26 @@
+f = @(x, y, p) p .* sin(x) + (1-p) .* cos(y);
+%f = @(x, y, p) exp(p );
+p1 = 0;
+p2 = 1;
+n = 10;
+np = 100;
+[x, y] = meshgrid(linspace(-pi, pi, n), linspace(-pi, pi, n));
+%% 11
+mov(1:np+1) = struct('cdata', [],'colormap', []);
+k = 0;
+for p = linspace(p1, p2, np)
+    z = f(x, y, p);
+    surf(x, y, z);
+    maxmap = and(islocalmax(z, 1, 'FlatSelection','all'), islocalmax(z, 2, 'FlatSelection','all'))
+    maxmap(1, 1) = 1
+    hold on;
+    plot3(x(maxmap), y(maxmap), z(maxmap),'mo','MarkerSize',8);
+    hold off;
+    mov(k+1) = getframe();
+    k = k + 1;
+end
+
+movie(mov, 1000);
+%%
+A = [1, 2, 1; 1, 1, 1]
+islocalmax(A, 2, 'FlatSelection','all')

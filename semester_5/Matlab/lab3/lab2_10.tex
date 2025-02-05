@@ -1,0 +1,101 @@
+\documentclass[11pt]{article}
+
+\usepackage{a4wide}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{hyperref}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+\ \vspace{-3cm}
+
+\includegraphics[width=0.5\textwidth]{msu.eps}\\
+{\scshape Московский государственный университет имени М.~В.~Ломоносова}\\
+Факультет вычислительной математики и кибернетики\\
+Кафедра системного анализа
+
+\vfill
+
+{\LARGE Отчет по практикуму}
+
+\vspace{1cm}
+
+{\Huge\bfseries <<Вывод уравнений, описывающих поляру для эллипса>>}
+\end{center}
+
+\vspace{1cm}
+
+\begin{flushright}
+  \large
+  \textit{Студент 315 группы}\\
+  М.\,В.~Миловидов
+
+  \vspace{5mm}
+
+  \textit{Руководитель практикума}\\
+  к.ф.-м.н., доцент П.\,А.~Точилин
+\end{flushright}
+
+\vfill
+
+\begin{center}
+Москва, 2024
+\end{center}
+
+\newpage
+\section{Постановка задачи}
+
+Дан эллипс с полуосями a, b и центром в точке $z_0 = (a_0, b_0)$, заданный уравнением
+\[\frac{(x - x_0)^2}{a^2} + \frac{(y - y_0)^2}{b^2} \leq 1\]
+\newline
+Вывести общий вид поляры для данного множества:
+\[Z^{\circ} = \left\{l \in \mathbb{R}^2~|~  \langle l, z \rangle \leq 1 , \forall z \in  Z\right\}\]
+
+\section{Вывод поляры}
+\[z = (x, y)~~~~ l = (l_1, l_2)\]
+Нам понадобится следующее свойство поляры:
+\[Z^{\circ} = \{l \in \mathbb{R}^2: \rho(l|Z) \leq 1\}\]
+где $\rho$ - опорная функция:
+\[\rho(l|Z)~=~\sup_{z\in Z} \langle l, z \rangle~= \sup_{(x, y)\in Z} (l_1 x + l_2 y)\]
+\newline
+Подставим выражение для опорной функции эллипса:
+\[\rho(l|Z)~=~\langle l, z_0 \rangle + \sqrt{l_1^2 a^2 + l_2^2 b^2}\]
+\[Z^{\circ} = \{l \in \mathbb{R}^2:~ \langle l, z_0 \rangle + \sqrt{l_1^2 a^2 + l_2^2 b^2} \leq 1\}\]
+
+\section{Примеры}
+
+Построим поляру эллипсов с полуосями a = 2, b = 1 с центрами в точках (0, 0) и (2, 1):
+Подставим значения в полученную выше формулу поляры:
+\[Z^{\circ}_1 = \{l \in \mathbb{R}^2:~ \langle l, z_0 \rangle + \sqrt{l_1^2 a^2 + l_2^2 b^2} \leq 1\} = \{l \in \mathbb{R}^2:~ \langle l, 0 \rangle + \sqrt{4 l_1^2 + l_2^2} \leq 1\} = \]
+\[ = \{l \in \mathbb{R}^2:~ 4 l_1^2 + l_2^2 \leq 1\}\] - эллипс с полуосями $\frac{1}{2}, 1$
+
+\[Z^{\circ}_2 = \{l \in \mathbb{R}^2:~ \langle l, z_0 \rangle + \sqrt{l_1^2 a^2 + l_2^2 b^2} \leq 1\} = \{l \in \mathbb{R}^2:~ 2 l_1 + l_2 + \sqrt{4 l_1^2 + l_2^2} \leq 1\} = \]
+\[ = \{l \in \mathbb{R}^2:~ \sqrt{4 l_1^2 + l_2^2} \leq 1 - 2 l_1 - l_2\} = \{l \in \mathbb{R}^2:~ 4 l_1^2 + l_2^2 \leq 1 + 4 l_1^2 + l_2^2 - 4 l_1 - 2 l_2 + 4 l_1 l_2\} = \]
+\[ = \{l \in \mathbb{R}^2:~ 1 - 4 l_1 - 2 l_2 + 4 l_1 l_2 \geq 0 \} = \{l \in \mathbb{R}^2:~ 4 l_1 (l_2 - 1) - 2 l_2 + 1 \geq 0 \} = \]
+\[ = \{l \in \mathbb{R}^2:~ l_1 \geq \frac{2(l_2 - 1)}{4(l_2 - 1)} + \frac{1}{4(l_2 - 1)}\} = \{l \in \mathbb{R}^2:~ l_1 \geq \frac{1}{2} + \frac{1}{4(l_2 - 1)}\}\]
+- граница данного множества - гипербола
+\newline
+Сравним с результатами работы программы
+
+\includegraphics[width=1\textwidth]{ellipse1.jpg}
+
+\includegraphics[width=1\textwidth]{ellipse2.jpg}
+
+\section{Вывод}
+
+Видно, что поляра эллипса может быть как ограничена, так и не ограничена.
+
+\begin{thebibliography}{99}
+\bibitem{1} Чистяков И.В., Паршиков М.В. Лекции по Оптимальному Управлению
+\bibitem{2} \href{https://sawiki.cs.msu.ru/index.php/Поляра_множества_и_ее_свойства}{Sawiki Поляра множества и ее свойства}
+\end{thebibliography}
+
+\end{document}
+
+
