@@ -1,0 +1,104 @@
+A01_02	Agriculture, hunting, forestry
+A03	Fishing and aquaculture
+B05_06	Mining and quarrying, energy producing products
+B07_08	Mining and quarrying, non-energy producing products
+B09	Mining support service activities
+C10T12	Food products, beverages and tobacco
+C13T15	Textiles, textile products, leather and footwear
+C16	Wood and products of wood and cork
+C17_18	Paper products and printing
+C19	Coke and refined petroleum products
+C20	Chemical and chemical products
+C21	Pharmaceuticals, medicinal chemical and botanical products
+C22	Rubber and plastics products
+C23	Other non-metallic mineral products
+C24	Basic metals
+C25	Fabricated metal products
+C26	Computer, electronic and optical equipment
+C27	Electrical equipment
+C28	Machinery and equipment, nec 
+C29	Motor vehicles, trailers and semi-trailers
+C30	Other transport equipment
+C31T33	Manufacturing nec; repair and installation of machinery and equipment
+D	Electricity, gas, steam and air conditioning supply
+E	Water supply; sewerage, waste management and remediation activities
+F	Construction
+G	Wholesale and retail trade; repair of motor vehicles
+H49	Land transport and transport via pipelines
+H50	Water transport
+H51	Air transport
+H52	Warehousing and support activities for transportation
+H53	Postal and courier activities
+I	Accommodation and food service activities
+J58T60	Publishing, audiovisual and broadcasting activities
+J61	Telecommunications
+J62_63	IT and other information services
+K	Financial and insurance activities
+L	Real estate activities
+M	Professional, scientific and technical activities
+N	Administrative and support services
+O	Public administration and defence; compulsory social security
+P	Education
+Q	Human health and social work activities
+R	Arts, entertainment and recreation
+S	Other service activities
+T	Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use
+HFCE	Final consumption expenditure of households
+NPISH	Final consumption expenditure of non-profit institutions serving households
+GGFC	Final consumption expenditure of general government
+GFCF	Gross Fixed Capital Formation
+INVNT	Changes in inventories
+DPABR	Direct purchases abroad by residents (imports)
+CONS_NONRES	Direct purchases by non-residents (exports)
+EXPO	Exports (cross border)
+IMPO	Imports (cross border)
+TTL_A01_02	Agriculture, hunting, forestry
+TTL_A03	Fishing and aquaculture
+TTL_B05_06	Mining and quarrying, energy producing products
+TTL_B07_08	Mining and quarrying, non-energy producing products
+TTL_B09	Mining support service activities
+TTL_C10T12	Food products, beverages and tobacco
+TTL_C13T15	Textiles, textile products, leather and footwear
+TTL_C16	Wood and products of wood and cork
+TTL_C17_18	Paper products and printing
+TTL_C19	Coke and refined petroleum products
+TTL_C20	Chemical and chemical products
+TTL_C21	Pharmaceuticals, medicinal chemical and botanical products
+TTL_C22	Rubber and plastics products
+TTL_C23	Other non-metallic mineral products
+TTL_C24	Basic metals
+TTL_C25	Fabricated metal products
+TTL_C26	Computer, electronic and optical equipment
+TTL_C27	Electrical equipment
+TTL_C28	Machinery and equipment, nec 
+TTL_C29	Motor vehicles, trailers and semi-trailers
+TTL_C30	Other transport equipment
+TTL_C31T33	Manufacturing nec; repair and installation of machinery and equipment
+TTL_D	Electricity, gas, steam and air conditioning supply
+TTL_E	Water supply; sewerage, waste management and remediation activities
+TTL_F	Construction
+TTL_G	Wholesale and retail trade; repair of motor vehicles
+TTL_H49	Land transport and transport via pipelines
+TTL_H50	Water transport
+TTL_H51	Air transport
+TTL_H52	Warehousing and support activities for transportation
+TTL_H53	Postal and courier activities
+TTL_I	Accommodation and food service activities
+TTL_J58T60	Publishing, audiovisual and broadcasting activities
+TTL_J61	Telecommunications
+TTL_J62_63	IT and other information services
+TTL_K	Financial and insurance activities
+TTL_L	Real estate activities
+TTL_M	Professional, scientific and technical activities
+TTL_N	Administrative and support services
+TTL_O	Public administration and defence; compulsory social security
+TTL_P	Education
+TTL_Q	Human health and social work activities
+TTL_R	Arts, entertainment and recreation
+TTL_S	Other service activities
+TTL_T	Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use
+TXS_IMP_FNL	Taxes less subsidies on intermediate and final products (paid in foreign countries) 
+TXS_INT_FNL	Taxes less subsidies on intermediate and final products (paid in domestic agencies, includes duty on imported products) 
+TTL_INT_FNL	Total intermediate consumption at purchasers’ prices
+VALU	Value added at basic prices
+OUTPUT	Output at basic prices
