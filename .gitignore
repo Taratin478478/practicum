@@ -1,2 +1,7 @@
 /cmake-build-debug
 /.idea
+.vscode/launch.json
+.vscode/settings.json
+.vscode/tasks.json
+in.txt
+out.exe
