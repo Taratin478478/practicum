@@ -9,7 +9,9 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${workspaceFolder}/out",
+                "--std=c++23",
+                "-Wall"
             ],
             "options": {
                 "cwd": "${fileDirname}"
