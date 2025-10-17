@@ -9,8 +9,14 @@
                 "-g",
                 "${file}",
                 "-o",
+<<<<<<< HEAD
+                "${workspaceFolder}/out",
+                "--std=c++23",
+                "-Wall"
+=======
                 "${workspaceFolder}\\out.exe",
                 "-std=c++23",
+>>>>>>> 68919e4944c9e7f8e0cbba3196e168bb4c38d68b
             ],
             "options": {
                 "cwd": "${fileDirname}"
