@@ -2,21 +2,16 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: g++.exe build active file",
-            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "label": "C/C++: g++ build active file",
+            "command": "/usr/bin/g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-<<<<<<< HEAD
                 "${workspaceFolder}/out",
-                "--std=c++23",
-                "-Wall"
-=======
-                "${workspaceFolder}\\out.exe",
                 "-std=c++23",
->>>>>>> 68919e4944c9e7f8e0cbba3196e168bb4c38d68b
+                "-Wall"
             ],
             "options": {
                 "cwd": "${fileDirname}"
