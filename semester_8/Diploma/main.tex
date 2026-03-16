@@ -1,0 +1,113 @@
+ \documentclass{article}
+
+\title{Diploma}
+\author{mishamilovidov}
+\date{August 2025}
+
+\usepackage{a4wide}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{comment}
+\usepackage[thinc]{esdiff}
+
+\DeclareMathOperator{\sinc}{sinc}
+\DeclareMathOperator{\arctg}{arctg}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\const}{const}
+\DeclareMathOperator{\grad}{grad}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\scalar}[2]{\left<#1,#2\right>}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+
+\newtheorem{theorem}{Теорема}
+\newtheorem{statement}{Утверждение}
+\newtheorem*{remark}{Замечание}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}[section]
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+\ \vspace{-3cm}
+
+\includegraphics[width=0.5\textwidth]{msu.eps}\\
+{\scshape Московский государственный университет имени М.~В.~Ломоносова}\\
+Факультет вычислительной математики и кибернетики\\
+Кафедра системного анализа
+
+\vfill
+
+{\LARGE Дипломная работа}
+
+\vspace{1cm}
+
+{\Huge\bfseries <<Условия квазимонотонности для кусочно-аффинных систем дифференциальных уравнений>>}
+\end{center}
+
+\vspace{1cm}
+
+\begin{flushright}
+  \large
+  \textit{Студент 415 группы}\\
+  М.\,В.~Миловидов
+
+  \vspace{5mm}
+
+  \textit{Научный руководитель}\\
+  к.ф.-м.н., доцент П.\,А.~Точилин
+\end{flushright}
+
+\vfill
+
+\begin{center}
+Москва, 2025
+\end{center}
+\newpage
+
+\section{Теоретические сведения}
+\begin{definition}
+    Система
+    \begin{equation} \label{eq:sys}
+        \dot x = f(x),\, x \in \mathbb{R}^n,\, n \ge 2 
+    \end{equation}
+    называется квазимонотонной, если
+    \[\forall i \in \overline{1,n}\ \ \forall \alpha_j \ge 0,\ j = \overline{1,n},\ j \ne i,\ \exists \tilde j:\ \alpha_{\tilde j} \ne 0 \]
+    \[f_i(x_1+\alpha_1,\dots,x_{i-1} + \alpha_{i-1},x_i,x_{i+1}+\alpha_{i+1},\dots,x_n+\alpha_n) \ge f(x_1,\dots,x_n).\]
+    Это свойство также называется монотонностью по внедиагональным элементам, или же условием Важевского.
+\end{definition}
+Для квазимонотонных систем верно следующее свойство:
+\begin{statement}
+    Пусть начальное множество \(\mathcal{X}_0\) вписано в отрезок \([\underline{x}, \overline{x}]\). Тогда множество достижимости \(x(\mathcal{X}_0,t)\) будет лежать в отрезке \([x(\underline{x}, t),\,x(\overline{x},t)]\)
+\end{statement}
+В случае гладких функций \(f_i(x)\) верно следующее утверждение:
+\begin{statement}
+    Если \(f_i(x),\, i=\overline{1,n}\) --- гладкие функции и \(\diffp{f_i}{{x_j}} > 0\ \forall i \ne j\), то \(f(x)\) --- квазимонотонна.
+\end{statement}
+
+\section{Постановка задачи}
+В данной работе мы будем исследовать условие квазимонотонности для частных видов кусочно-афинных (кусочно-линейных) функций. В результате нужно получить некоторые необходимые и достаточные условия. Рассмотрим следующие виды функции \(f(x)\):
+\begin{enumerate}
+    \item \(\forall i = \overline{1,n}\ \, f_i(x) \) --- суперпозиция функций \(\min()\), \(\max()\) и арифметических операций.
+    \item Функция \(f(x)\) определена на множестве \(\Omega \subset \mathbb{R}^n\), причем \(\Omega = \bigcup_{j = 1}^m \Omega^{(j)}\), где \(\Omega^{(j)}\) --- выпуклые многогранники, и функция \(f(x)\) на \(\Omega^{(j)}\) имеет вид \(f_i(x) = a_i^jx_i + b_i^j\).
+\end{enumerate}
+Обе функции являются кусочно-афинными.
+
+\[K: \alpha K \subset K\ \forall \alpha \ge 0\]
+\[K - \text{выпуклый}, K \cap(-K) = \{0\}, \]
+\[x \succeq y \Leftrightarrow x - y \in K\]
+\[x \succ y \Leftrightarrow x \succeq y, x \neq y\]
+
+\end{document}
