@@ -1,0 +1,159 @@
+% Quick start guide
+\documentclass[envcountsect]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{comment}
+\usepackage[thinc]{esdiff}
+
+\selectlanguage{russian}
+\usetheme{Warsaw}
+
+\newtheorem{rutheorem}{Теорема}
+\newtheorem{rustatement}{Утверждение}
+\newtheorem*{ruremark}{Замечание}
+\newtheorem*{ruexample}{Пример}
+\theoremstyle{definition}
+\newtheorem{rudefinition}{Определение}[section]
+
+% Title page details
+\title{<<Условия квазимонотонности для кусочно-аффинных систем дифференциальных уравнений>>}
+\subtitle{Дипломная работа}
+\author{Миловидов Михаил}
+\institute{МГУ имени М. В. Ломоносова}
+\date{\today}
+
+\begin{document}
+	
+	\begin{frame}
+		% Print the title page as the first slide
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}
+		\begin{rudefinition}
+			Система
+			\begin{equation} \label{sys}
+				\dot x = f(x),\, x \in \mathbb{R}^n,\, n \ge 2 
+			\end{equation}
+			называется квазимонотонной, если
+			\[\forall i \in \overline{1,n}\ \ \forall \alpha_j \ge 0,\ j = \overline{1,n},\ j \ne i,\ \exists \tilde j:\ \alpha_{\tilde j} \ne 0 \]
+			\begin{equation} \label{qm}
+			\begin{split}
+				f_i(x_1+\alpha_1,\dots,x_{i-1} + \alpha_{i-1},x_i,x_{i+1}+\alpha_{i+1},\dots,x_n+\alpha_n) \ge \\
+				\ge f_i(x_1,\dots,x_n).
+			\end{split}
+			\end{equation}
+			Это свойство также называется монотонностью по внедиагональным элементам, или же условием Важевского.
+		\end{rudefinition}
+	\end{frame}
+	
+	\begin{frame}
+		Для квазимонотонных систем верно следующее свойство:
+		\begin{rustatement}
+			Пусть начальное множество \(\mathcal{X}_0\) вписано в отрезок \([\underline{x}, \overline{x}]\). Тогда множество достижимости \(x(\mathcal{X}_0,t)\) будет лежать в отрезке \([x(\underline{x}, t),\,x(\overline{x},t)]\)
+		\end{rustatement}
+		В случае гладких функций \(f_i(x)\) верно следующее утверждение:
+		\begin{rustatement}
+			Если \(f_i(x),\, i=\overline{1,n}\) --- гладкие функции и \(\diffp{f_i}{{x_j}} > 0\ \forall i \ne j\), то \(f(x)\) --- квазимонотонна.
+		\end{rustatement}
+	\end{frame}
+
+	\begin{frame}{Постановка задачи}
+		В данной работе мы будем исследовать условие квазимонотонности для частных видов кусочно-афинных (кусочно-линейных) функций. В результате нужно получить некоторые необходимые и достаточные условия. Рассмотрим следующие виды функции \(f(x)\):
+		\begin{enumerate}
+			\item \(\forall i = \overline{1,n}\ \, f_i(x) \) --- суперпозиция функций \(\min()\), \(\max()\) и арифметических операций.
+			\item Функция \(f(x)\) определена на множестве \(\Omega \subset \mathbb{R}^n\), причем \(\Omega = \bigsqcup_{k = 1}^m \Omega^{(k)}\), где \(\Omega^{(k)}\) --- выпуклые многогранники, и функция \(f(x)\) на \(\Omega^{(k)}\) имеет вид \(f_i(x) = \sum_{j = 1}^{n} a_{ij}^{(k)}x_j + b_i^{(k)}\). Значения функции на границах обговариваются отдельно.
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}{Афинные системы}
+		Рассмотрим афинную функцию вида
+		\[f(x) = Ax + b,\, x \in \mathbb{R}^{n},\, A=[a_{ij}] \in \mathbb{R}^{n \times n},\, b \in \mathbb{R}^{n}.\]
+		\[f_i(x) = \sum_{j=1}^{n} a_{ij}x_j + b_i.\]
+		
+		Для таких функций справедлив следующий критерий квазимонотонности:
+		\begin{equation} \label{qmaff}
+			a_{ij} \ge 0\ \forall i \neq j,\ i,j = \overline{1, n}.
+		\end{equation}
+	\end{frame}
+	
+	\begin{frame}{Кусочно-афинные системы}
+		Пусть 
+		\[f(x) = \begin{cases}A^{(k)}x + b^{(k)},\quad x \in \Omega^{(k)},\end{cases}\]
+		где
+		\[\Omega \subset \mathbb{R}^n, \Omega = \bigsqcup_{k = 1}^m \Omega^{(k)},\, x \in \mathbb{R}^{n},\, A=[a_{ij}] \in \mathbb{R}^{n \times n},\, b \in \mathbb{R}^{n}.\]
+		\[f_i^{(k)}(x) = \sum_{j=1}^{n} a_{ij}^{(k)}x_j + b_i^{(k)}.\]
+		Аналогично предыдущему случаю, получаем условие:
+		\begin{equation} \label{qmpwaff}
+			a_{ij}^{(k)} \ge 0\ \forall i \neq j,\ i,j = \overline{1, n},\ k = \overline{1, m}.
+		\end{equation}
+		Однако оно уже не будет достаточным для квазимонотонности функции. Нужно также проверять неубывание при прохождении границ множеств
+	\end{frame}
+	
+	\begin{frame}{Системы, являющиеся суперпозицией функций \(\min\) и \(\max\)}
+		Рассмотрим суперпозицию функций \(\min\) и \(\max\). Рассмотрим функции, у которых \(f_i\) являются суперпозициями функций \(\min\), \(\max\) а также арифметических операций \(+\) и \(-\) и операции умножения на константу.
+		\begin{ruexample}
+			\[\begin{cases}
+				f_1(x) = 1 + \min(2x_1,x_2) + \min(x_1, 2x_2), \\
+				f_2(x) = -\max(2x_1 - x_2, x_2, \min(3, x_1)).
+			\end{cases}\]
+		\end{ruexample}
+		Такие функции будут являться непрерывными, а значит, условие \ref{qmpwaff} будет также и достаточным. 
+	\end{frame}
+	
+	\begin{frame}{Случай простой суперпозиции}
+		Рассмотрим случай простой суперпозиции:
+		\[f_i(x) = \max(g_i^{(1)}(x),\dots,g_i^{(m_i)}(x))\]
+		или
+		\[f_i(x) = \min(g_i^{(1)}(x),\dots,g_i^{(m_i)}(x)),\]
+		где
+		\[g_i^{(k)}(x) = \sum_{j=1}^n a_{ij}^{(k)} x_j + b_i^{(k)},\, i = \overline{1, n},\, k = \overline{1, m_i}.\]
+		Для таких функций условие \ref{qmpwaff} принимает вид
+		\begin{equation} \label{qmmm}
+			a_{ij}^{(k)} \ge 0\ \forall i \neq j,\ i,j = \overline{1, n},\ k = \overline{1, m_i}.
+		\end{equation}
+	\end{frame}
+	
+	\begin{frame}{Общий случай}
+		К этому случаю можно свести некоторые более сложные виды функций, однако в общем случае не всегда можно утверждать об отсутсвии квазимонотонности при присутствии отрицательного внедиагонального коэффициента, так как соответствующая функция может не попасть в итоговую кусочно-афинную функцию.
+		\begin{ruexample}
+			\[f_1(x) = \max(0, \min(x_2, -x_2))\]
+			Упростив, получаем, что \(f_1(x) \equiv 0\), однако здесь присутствует отрицательный коэффициент \(-1\).
+		\end{ruexample}
+	\end{frame}
+	
+	\begin{frame}{Функция, заданная на симплексах}
+		Рассмотрим некоторое разбиение области \(\Omega\) на симплексы, пересекающиеся только по граничным точкам. Идея состоит в том, что, задав функцию лишь на всех вершинов данных симплексов, мы сможем продолжить ее на всю область.
+	Для каждого симплекса \(\Omega^{(k)}\) обозначим координаты его вершин как \(g^{(k)}_1,\dots,g^{(k)}_n\). Тогда для любой точки \(x \in \Omega^{(k)}\) будет существовать единственный вектор барицентрических координат \(\alpha^{(k)} = \alpha^{(k)}(x) = (\alpha^{(k)}_1,\,\dots, \alpha^{(k)}_{n+1})\) такой, что
+	\[\sum_{i = 1}^{n + 1} \alpha^{(k)}_i = 1,\quad \alpha^{(k)}_i \ge 0\ \forall i = \overline{1, n+1},\quad \sum_{i = 1}^{n+1} \alpha^{(k)}_i g^{(k)}_i = x.\]
+	\end{frame}
+	
+	\begin{frame}
+		Дополним вектор \(x\) до  \(\tilde{x} = \begin{bmatrix} x \\ 1 \end{bmatrix}\), и пусть \(\tilde{G}^{(k)} = \begin{bmatrix} g^{(k)}_{1} & \dots & g^{(k)}_{n+1} \\ 1 & \dots & 1 \end{bmatrix} \in \mathbb{R}^{(n + 1) \times (n + 1)}\). Тогда \(\tilde{G}^{(k)} \alpha^{(k)}(x) = \tilde x\). Пусть \((\tilde{G}^{(k)})^{-1} = \begin{bmatrix} H^{(k)} & h^{(k)} \end{bmatrix}\). Получим, что \(\alpha^{(k)}(x) = H^{(k)} x + h^{(k)} \).
+		
+		При \(x \in \Omega^{(k)}\) справедливо следующее представление функции \(f\):
+		\[f(x) = F^{(k)}\alpha^{(k)}(x) = A^{(k)}x + b^{(k)},\]
+		где \[F^{(k)} = \begin{bmatrix} f(g^{(k)}_{1}) & \dots & f(g^{(k)}_{n+1}) \end{bmatrix} \in \mathbb{R}^{n\times(n+1)},\]
+		\[A^{(k)} = F^{(k)}H^{(k)} \in \mathbb{R}^{n\times n},\quad b^{(k)} = F^{(k)}h^{(k)} \in \mathbb{R}^{n}.\]
+		Таким образом, мы получили явный кусочно-аффинный вид функции на всей области определения и можем применить \ref{qmpwaff}.
+	\end{frame}
+	
+	\begin{frame}{Дальнейшие действия}
+		\begin{itemize}
+			\item Рассмотреть частные случаи симплексной сетки
+			\item Рассмотреть другие способы задания кусочно линейной функции
+			\item Рассмотреть случай ограниченной области (параллелепипед)
+			\item Рассмотреть обобщенную квазимонотонность (неубывание и невозрастание по разным переменным)	
+		\end{itemize}
+	\end{frame}
+\end{document}
