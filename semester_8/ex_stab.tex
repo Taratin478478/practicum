@@ -1,0 +1,30 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage{amsmath}
+
+\begin{document}
+	
+\noindent\textbf{Упражнение 23.}
+	Вывести условие устойчивости матрицы
+	\[A = \begin{pmatrix} -\frac{1}{2\lambda_{12}} & \frac{2\lambda^2_{12}}{\lambda_{21}}l^2_{12} \\ \frac{2\lambda^2_{22}}{\lambda_{11}l^2_{21}} & -\frac{1}{2\lambda_{22}} \end{pmatrix}. \]
+\noindent\textbf{Решение.}
+Найдем собственные значения матрицы:
+\[\begin{vmatrix} -\frac{1}{2\lambda_{12}} - \mu & \frac{2\lambda^2_{12}}{\lambda_{21}}l^2_{12} \\ \frac{2\lambda^2_{22}}{\lambda_{11}l^2_{21}} & -\frac{1}{2\lambda_{22}} - \mu \end{vmatrix} = 0,\]
+\[\mu^2 +\frac{1}{2}\left(\frac{1}{\lambda_{12}} + \frac{1}{\lambda_{22}}\right)\mu + \frac{1}{4\lambda_{12}\lambda_{22}} - 4\frac{\lambda_{12}^2\lambda_{22}^2}{\lambda_{11}\lambda_{21}}\frac{l_{12}^2}{l_{21}^2} = 0,\]
+\[D = \frac{1}{4}\left(\frac{1}{\lambda_{12}^2} + \frac{2}{\lambda_{12}\lambda_{22}} + \frac{1}{\lambda_{22}^2}\right) - \frac{1}{\lambda_{12}\lambda_{22}} + 16\frac{\lambda_{12}^2\lambda_{22}^2}{\lambda_{11}\lambda_{21}}\frac{l_{12}^2}{l_{21}^2} = \frac{1}{4}\left(\frac{1}{\lambda_{12}} - \frac{1}{\lambda_{22}}\right)^2 + 16\frac{\lambda_{12}^2\lambda_{22}^2}{\lambda_{11}\lambda_{21}}\frac{l_{12}^2}{l_{21}^2},\]
+\[\mu_{1, 2} = -\frac{1}{4}\left(\frac{1}{\lambda_{12}} + \frac{1}{\lambda_{22}}\right) \pm \sqrt{\frac{1}{16}\left(\frac{1}{\lambda_{12}} - \frac{1}{\lambda_{22}}\right)^2 + 4\frac{\lambda_{12}^2\lambda_{22}^2}{\lambda_{11}\lambda_{21}}\frac{l_{12}^2}{l_{21}^2}}\]
+По теореме об устойчивости линейной стационарной системы система асимптотически устойчива, если \(\Re (\mu_{1, 2})  < 0\). Так как корень с плюсом больше либо равен корню с минусом, достаточно проверять корень с плюсом \((\mu_2)\).
+
+Исследуем, когда система устойчива по Ляпунову, но не асимптотически. Пусть \(\Re (\mu_2) = 0\). Возможные случаи:
+\begin{enumerate}
+	\item \[\frac{1}{16}\left(\frac{1}{\lambda_{12}} - \frac{1}{\lambda_{22}}\right)^2 + 4\frac{\lambda_{12}^2\lambda_{22}^2}{\lambda_{11}\lambda_{21}}\frac{l_{12}^2}{l_{21}^2} > 0 \Rightarrow 
+	\text{Система устойчива }  (\mu_2 = 0,\, \mu_1 < 0).\]
+	\item \[\frac{1}{16}\left(\frac{1}{\lambda_{12}} - \frac{1}{\lambda_{22}}\right)^2 + 4\frac{\lambda_{12}^2\lambda_{22}^2}{\lambda_{11}\lambda_{21}}\frac{l_{12}^2}{l_{21}^2} \le 0 \Rightarrow \Re (\mu_1) = \Re (\mu_2) = -\frac{1}{4}\left(\frac{1}{\lambda_{12}} + \frac{1}{\lambda_{22}}\right) = 0 \Rightarrow \lambda_{12} = \lambda_{22}.\]
+	Нужно проверить геометрическую кратность собственного значения \(\mu = 0\). Если бы оно равнялось 2, мы бы имели нулевую матрицу, что в данном случае невозможно. Поэтому кратность \(\mu\) равна 1. Из этого следует, что система неустойчива.
+\end{enumerate} 
+В остальных случаях система также неустойчива.
+
+\end{document}

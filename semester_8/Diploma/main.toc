@@ -1,0 +1,15 @@
+\babel@toc {russian}{}\relax 
+\contentsline {section}{\numberline {1}Введение}{2}{section.1}%
+\contentsline {section}{\numberline {2}Теоретические сведения}{2}{section.2}%
+\contentsline {section}{\numberline {3}Постановка задачи}{4}{section.3}%
+\contentsline {section}{\numberline {4}Общие свойства кусочно-аффинных систем}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Аффинные системы}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Кусочно-аффинные системы}{5}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Системы, являющиеся суперпозицией функций \(\min \) и \(\max \)}{5}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Случай неограниченной области}{5}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Случай ограниченной области}{6}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Функция, заданная на симплексах}{8}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Введение функции, заданной на симплексах}{8}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Общий случай}{9}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Случай стандартного разбиения}{10}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Обобщенная квазимонотонность}{12}{section.7}%
